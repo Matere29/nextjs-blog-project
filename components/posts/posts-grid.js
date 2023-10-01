@@ -1,7 +1,7 @@
 import PostItem from './post-item'
 import classes from './post-item.module.css'
 
-function PostsGrind(props) {
+function PostsGrid(props) {
     const { posts } = props;
 
     return (
@@ -12,4 +12,4 @@ function PostsGrind(props) {
     </ul>
     )
 }
-export default PostsGrind
+export default PostsGrid

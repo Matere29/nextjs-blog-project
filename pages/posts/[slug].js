@@ -1,5 +1,5 @@
 import PostContent from "@/components/posts/post-detail/post-content";
-import { getPostFiles } from "@/lib/posts-util";
+import { getPostData, getPostsFiles } from '@/lib/posts-util';
 import { Fragment } from "react";
 import Head from 'next/head';
 
@@ -31,7 +31,7 @@ export function getStaticProps(context) {
 }
 export function getStaticPaths() {
 
-    const postFilenames = getPostFiles()
+    const postFilenames = getPostsFiles();
 
     const slugs = postFilenames.map((fileName) => fileName.replace(/\.md$/, ''))
     

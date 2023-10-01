@@ -3,7 +3,7 @@ import Hero from '@/components/home-page/hero'
 import FeaturedPosts from '@/components/home-page/featured-posts'
 import { getFeaturedPosts } from '@/lib/posts-util'
 import Head from 'next/head'
-export default function HomePage(props) {
+function HomePage(props) {
 
   return (
     <Fragment>
@@ -23,7 +23,8 @@ export function getStaticProps() {
 
   return {
     props: {
-      posts: featuredPosts
+      posts: featuredPosts,
     },
   }
 }
+export default HomePage;
